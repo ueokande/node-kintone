@@ -1,6 +1,6 @@
 {
-  "name": "node-kintone",
-  "version": "0.0.0",
+  "name": "kintone",
+  "version": "0.1.0",
   "description": "Node binding to kintone",
   "author": "Shin'ya Ueoka <ueokande@i-beam.org>",
   "main": "lib",
