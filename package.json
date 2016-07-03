@@ -5,6 +5,7 @@
   "author": "Shin'ya Ueoka <ueokande@i-beam.org>",
   "main": "lib",
   "scripts": {
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/ueokande/node-kintone/issues"
   },
-  "homepage": "https://github.com/ueokande/node-kintone#readme"
+  "homepage": "https://github.com/ueokande/node-kintone#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "request": "^2.72.0"
+  }
 }
