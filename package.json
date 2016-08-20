@@ -5,7 +5,9 @@
   "author": "Shin'ya Ueoka <ueokande@i-beam.org>",
   "main": "lib",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "eslint": "eslint -c .eslint.yml lib test"
+
   },
   "repository": {
     "type": "git",
