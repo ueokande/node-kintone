@@ -90,7 +90,6 @@ rules:
   no-with: "error"
   one-var-declaration-per-line: "error"
   quotes: ["error", "single"]
-  quote-props: ["error", "as-needed"]
   radix: "error"
   semi: "error"
   semi-spacing: ["error", {before: false, after: true}]
