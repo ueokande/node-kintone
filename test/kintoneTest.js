@@ -7,7 +7,7 @@ describe('kintone class', function() {
   var api;
 
   beforeEach(function() {
-    api = new kintone('example', 'auth');
+    api = new kintone('example', { 'token': 'loremipsum' });
   });
 
   it('has method', function() {
