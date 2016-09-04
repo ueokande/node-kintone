@@ -22,8 +22,8 @@ var kintone = require('kintone');
 
 var token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var api = new kintone('example.cybozu.com', { token: token });
-api.app.get({ id: 1 }, function(err, body) {
-    console.log(body);
+api.app.get({ id: 1 }, function(err, response) {
+    console.log(response);
 });
 ```
 
