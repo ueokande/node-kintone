@@ -30,8 +30,12 @@ api.app.get({ id: 1 }, function(err, response) {
 Authorization by username and password is also allowed:
 
 ```javascript
-var api = new kintone('example.cybozu.com', { username: "XXXXXXXX",
-                                              password: "XXXXXXXX"});
+var api = new kintone('example.cybozu.com', {
+    authorization: {
+      username: "XXXXXXXX",
+      password: "XXXXXXXX"
+    }
+});
 ```
 
 API Documentation
