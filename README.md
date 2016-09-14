@@ -38,6 +38,21 @@ var api = new kintone('example.cybozu.com', {
 });
 ```
 
+Authorization with basic authentication:
+
+```javascript
+var api = new kintone('example.cybozu.com', {
+    authorization: {
+      username: "XXXXXXXX",
+      password: "XXXXXXXX"
+    },
+    basic: {
+      username: "YYYYYYYY",
+      password: "YYYYYYYY",
+    }
+});
+```
+
 API Documentation
 -----------------
 
