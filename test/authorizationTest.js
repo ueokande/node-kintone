@@ -14,6 +14,14 @@ describe('authorization', function() {
   var password = 'password';
   var base64 = new Buffer(username + ':' + password).toString('base64');
 
+  it('throws an error when no authorizations', function() {
+    function fn() {
+      new kintone('example');
+    }
+
+    expect(fn).to.throw(TypeError);
+  })
+
   it('authenticates with base64 encoded authorization', function(done) {
     var scope = nock('https://example.cybozu.com', {
       reqheaders: {
