@@ -20,7 +20,6 @@ rules:
   consistent-return: "error"
   curly: ["error", "all"]
   default-case: "error"
-  dot-notation: ["error", { allowKeywords: true }]
   eol-last: "error"
   eqeqeq: "error"
   func-style: ["error", "declaration"]
