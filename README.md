@@ -53,6 +53,13 @@ var api = new kintone('example.cybozu.com', {
 });
 ```
 
+Authorization with OAuth token:
+
+```javascript
+var oauthToken = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var api = new kintone('example.cybozu.com', { oauthToken: oauthToken });
+```
+
 API Documentation
 -----------------
 

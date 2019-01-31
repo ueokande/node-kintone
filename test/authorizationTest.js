@@ -114,4 +114,21 @@ describe('authorization', function() {
       done();
     });
   });
+
+  it('authenticates with oauth token', function(done) {
+    var oauthToken = '0123456789abcdef';
+    var scope = nock('https://example.cybozu.com', {
+      reqheaders: {
+        'Authorization': 'Bearer ' + oauthToken
+      }
+    }).get('/k/v1/app.json').reply(200, '{}');
+    var api = new kintone('example', {
+      oauthToken: oauthToken,
+    });
+
+    api.app.get({}, function() {
+      expect(scope.isDone()).to.be.true;
+      done();
+    });
+  });
 });
