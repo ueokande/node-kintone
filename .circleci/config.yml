@@ -1,0 +1,67 @@
+version: 2.1
+
+executors:
+  node8:
+    docker:
+      - image: circleci/node:8.0.0
+  node10:
+    docker:
+      - image: circleci/node:10.0.0
+  node_latest:
+    docker:
+      - image: circleci/node:latest
+
+commands:
+  build:
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run eslint
+      - run: npm test
+
+jobs:
+  build_node8:
+    executor:
+      name: node8
+    steps:
+      - build
+
+  build_node10:
+    executor:
+      name: node10
+    steps:
+      - build
+
+  build_node_latest:
+    executor:
+      name: node_latest
+    steps:
+      - build
+
+  deploy:
+    executor:
+      name: node8
+    steps:
+      - checkout
+      - run:
+          name: "Prepare npm account"
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >~/.npmrc
+      - run: npm publish
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build_node8
+      - build_node10
+      - build_node_latest
+      - deploy:
+          requires:
+            - build_node8
+            - build_node10
+            - build_node_latest
+          filters:
+            tags:
+              only: /^v.*$/
+            branches:
+              ignore: /.*/
