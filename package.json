@@ -6,8 +6,7 @@
   "main": "lib",
   "scripts": {
     "test": "mocha",
-    "eslint": "eslint -c .eslint.yml lib test"
-
+    "eslint": "eslint -c .eslintrc.yml lib test"
   },
   "repository": {
     "type": "git",
