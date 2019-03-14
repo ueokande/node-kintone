@@ -64,13 +64,13 @@ workflows:
       - build_node8
       - build_node10
       - build_node_latest
-  deploy:
-    jobs:
-      - build_node8
-      - build_node10
-      - build_node_latest
       - deploy:
           requires:
             - build_node8
             - build_node10
             - build_node_latest
+          filters:
+            tags:
+              only: /^v.*$/
+            branches:
+              ignore: /.*/
