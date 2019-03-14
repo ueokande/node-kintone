@@ -51,6 +51,7 @@ jobs:
     executor:
       name: node8
     steps:
+      - checkout
       - run:
           name: "Prepare npm account"
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >~/.npmrc
