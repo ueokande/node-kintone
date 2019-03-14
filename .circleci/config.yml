@@ -34,17 +34,27 @@ jobs:
       name: node8
     steps:
       - build
+
   build_node10:
     executor:
       name: node10
     steps:
       - build
+
   build_node_latest:
     executor:
       name: node_latest
     steps:
       - build
 
+  deploy:
+    executor:
+      name: node8
+    steps:
+      - run:
+          name: "Prepare npm account"
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >~/.npmrc
+      - run: npm publish
 
 workflows:
   version: 2
@@ -53,3 +63,13 @@ workflows:
       - build_node8
       - build_node10
       - build_node_latest
+  deploy:
+    jobs:
+      - build_node8
+      - build_node10
+      - build_node_latest
+      - deploy:
+          requires:
+            - build_node8
+            - build_node10
+            - build_node_latest
