@@ -1,0 +1,4 @@
+/.circleci
+/.eslintrc.yml
+/.npmignore
+/test
