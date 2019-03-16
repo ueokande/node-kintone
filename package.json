@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ueokande/node-kintone#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "eslint": "^3.3.1",
     "mocha": "^2.5.3",
     "nock": "^8.0.0"
