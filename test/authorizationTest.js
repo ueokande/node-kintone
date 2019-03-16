@@ -13,8 +13,8 @@ describe('authorization', function() {
   var username = 'alice';
   var password = 'password';
   var basicUsername = 'bob';
-  var base64 = new Buffer(username + ':' + password).toString('base64');
-  var basicBase64 = new Buffer(basicUsername + ':' + password).toString('base64');
+  var base64 = Buffer.from(username + ':' + password).toString('base64');
+  var basicBase64 = Buffer.from(basicUsername + ':' + password).toString('base64');
 
   it('throws an error when no authorizations', function() {
     function fn() {
