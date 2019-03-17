@@ -1,5 +1,5 @@
-{ 
-  "apis": { 
+{
+  "apis": {
     "app/acl/get": { "link": "apis/app/acl/get.json" },
     "app/acl/put": { "link": "apis/app/acl/put.json" },
     "app/customize/get": { "link": "apis/app/customize/get.json" },
@@ -7,6 +7,7 @@
     "app/form/layout/get": { "link": "apis/app/form/layout/get.json" },
     "app/get": { "link": "apis/app/get.json" },
     "app/settings/get": { "link": "apis/app/settings/get.json" },
+    "app/status/get": { "link": "apis/app/status/get.json" },
     "app/views/get": { "link": "apis/app/views/get.json" },
     "apps/get": { "link": "apis/apps/get.json" },
     "bulkRequest/post": { "link": "apis/bulkRequest/post.json" },
@@ -32,6 +33,8 @@
     "preview/app/post": { "link": "apis/preview/app/post.json" },
     "preview/app/settings/get": { "link": "apis/preview/app/settings/get.json" },
     "preview/app/settings/put": { "link": "apis/preview/app/settings/put.json" },
+    "preview/app/status/get": { "link": "apis/preview/app/status/get.json" },
+    "preview/app/status/put": { "link": "apis/preview/app/status/put.json" },
     "preview/app/views/get": { "link": "apis/preview/app/views/get.json" },
     "preview/app/views/put": { "link": "apis/preview/app/views/put.json" },
     "preview/field/acl/get": { "link": "apis/preview/field/acl/get.json" },
@@ -49,6 +52,7 @@
     "record/post": { "link": "apis/record/post.json" },
     "record/put": { "link": "apis/record/put.json" },
     "record/status/put": { "link": "apis/record/status/put.json" },
+    "records/acl/evaluate/get": { "link": "apis/records/acl/evaluate/get.json" },
     "records/delete": { "link": "apis/records/delete.json" },
     "records/get": { "link": "apis/records/get.json" },
     "records/post": { "link": "apis/records/post.json" },
@@ -63,6 +67,5 @@
     "space/thread/comment/post": { "link": "apis/space/thread/comment/post.json" },
     "space/thread/put": { "link": "apis/space/thread/put.json" },
     "template/space/post": { "link": "apis/template/space/post.json" }
-   }
- }
-
+  }
+}
