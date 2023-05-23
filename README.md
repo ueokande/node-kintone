@@ -1,6 +1,10 @@
 [![CircleCI](https://circleci.com/gh/ueokande/node-kintone.svg?style=svg)](https://circleci.com/gh/ueokande/node-kintone)
 [![npm version](https://badge.fury.io/js/kintone.svg)](https://badge.fury.io/js/kintone)
 
+* * *
+⚠️ This project is no longer under active maintainenance. Please use [@kintone/rest-api-client](https://github.com/kintone/js-sdk/tree/master/packages/rest-api-client).
+* * *
+
 Node-kintone
 ============
 
